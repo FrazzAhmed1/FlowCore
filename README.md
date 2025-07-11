@@ -1,12 +1,27 @@
-# React + Vite
+# FlowCore Productivity & Task Management App
+This React-based web application helps users boost productivity through comprehensive task and time management. Key features include goal setting, task tracking and management, Pomodoro-style timers for focused study sessions, and insightful weekly statistics on time spent and tasks completed.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Users can securely log in with authentication to personalize their experience. The app combines intuitive task organization with real-time timers to optimize workflow and productivity.
 
-Currently, two official plugins are available:
+Features
+User authentication and secure login
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Goal creation and detailed task management
 
-## Expanding the ESLint configuration
+Pomodoro timers with customizable settings (count up/down)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Weekly statistics showing time spent and task completion rates
+
+Responsive and user-friendly interface
+
+Technology Stack
+Frontend: React, JSX, CSS Modules
+
+Backend: Node.js, Express.js (planned/future)
+
+Database: MongoDB (planned/future)
+
+Version Control: Git & GitHub
+
+This project demonstrates core React concepts like state management, props, hooks (useState, useEffect), and component-driven design, integrated with modern web development best practices.
+
