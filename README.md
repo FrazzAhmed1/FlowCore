@@ -23,5 +23,5 @@ Database: MongoDB (planned/future)
 
 Version Control: Git & GitHub
 
-This project demonstrates core React concepts like state management, props, hooks (useState, useEffect), and component-driven design, integrated with modern web development best practices.
+This project demonstrates core React concepts like state management, props, hooks (useState, useEffect), and component-driven design, integrated with modern web development best practices. 
 

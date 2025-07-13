@@ -7,7 +7,7 @@ const Statistics = () => {
   const chartRef2 = useRef(null); 
 
   useEffect(() => { 
-    const ctx = chartRef.current.getContext('2d');
+    const ctx = chartRef.current.getContext('2d'); 
 
     const timeChart = new Chart(ctx, {
       type: 'bar',
@@ -26,7 +26,7 @@ const Statistics = () => {
         plugins: {
           legend: {
             display: true,
-            labels: { color: '#333' }
+            labels: { color: '#333' } 
           }
         },
         scales: {
@@ -47,7 +47,7 @@ const Statistics = () => {
     };
   }, []); 
 
-  useEffect(() => {
+  useEffect(() => { 
     const ctx2 = chartRef2.current.getContext('2d'); 
 
     const tasksChart = new Chart(ctx2, {

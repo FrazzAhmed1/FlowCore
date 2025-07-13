@@ -15,7 +15,7 @@ body {
 
 
 .header { 
-    display: flex;
+    display: flex; 
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -29,7 +29,7 @@ body {
     display: flex;
     gap: 50px; 
     align-items: center;
-    flex: 0.6;
+    flex: 0.6; 
 } 
 
 .button1 { 

@@ -7,13 +7,13 @@ import Timer from './timer';
 const HomePage = () => { 
 
     const [quote, setQuote] = React.useState(''); 
-    const [author, setAuthor] = React.useState(''); 
+    const [author, setAuthor] = React.useState('');  
  
     const key = '5NGROY6U+kPPOPHarq01ZA==O8nMQCn7ZM8RmhEO';  
      
     useEffect(() => { 
         
-        const fetchQuote = async () => { 
+        const fetchQuote = async () => {  
  
             try { 
                 const response = await fetch(`https://api.api-ninjas.com/v1/quotes 

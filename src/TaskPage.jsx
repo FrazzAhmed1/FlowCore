@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './tasks.css';
 
-const TaskPage = () => {  
+const TaskPage = () => {   
 
     const [task, setTask] = React.useState([]); 
     const [text, setText] = React.useState('');
@@ -60,4 +60,4 @@ const TaskPage = () => {
     ); 
 };
 
-export default TaskPage; 
+export default TaskPage;  

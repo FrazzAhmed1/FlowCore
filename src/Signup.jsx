@@ -1,43 +1,123 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Signup.css';
 
-const Signup = () => { 
-    return (
-        <>
-        <form className="login">  
-    <h1 className="word"> Sign Up </h1>
+const Signup = () => {
+  const [formData, setFormData] = useState({
+    naming: '',
+    email: '',
+    uname: '',
+    password: '', 
+  }); 
 
-    <div className="container">
+  const [validate, setValidate] = useState(''); 
+ 
+  function validEmpty() { 
+    if (!formData.naming || !formData.email || !formData.uname || !formData.password) {
+      setValidate("All fields must be filled in");
+      return false; 
+    } else {
+      setValidate(''); 
+      return true; 
+    } 
+  } 
+ 
+  function validPassword () {
+    if (formData.password.length>9)  { 
+       setValidate("Password must be less than 9 letters"); 
+       return false;
+    }
+       else {
+        return true;
+  }
+}
 
-    <div className="user">
-    <label> First Name</label> 
-    <input type="text" className="value" placeholder="Enter first name" /> 
-    </div>
+  function handleChange(e) {
+    const { name, value } = e.target;
 
-    <div className="user"> 
-    <label> Last Name</label>
-    <input type="text" className="value" placeholder="Enter last name" /> 
-    </div>
+    setFormData(prevFormData => ({
+      ...prevFormData,
+      [name]: value, 
+    }));
+  }
 
-    <div className="user">
-    <label> Username</label>
-    <input type="text" className="value" placeholder="Enter username" /> 
-    </div>
+  function handleSubmit(e) { 
+    e.preventDefault(); 
+    if (validEmpty() && validPassword()) {
+      console.log(formData);
+      
+    }
+  }
 
-    <div className="user">
-    <label>Password</label>
-    <input type="password" className="value" placeholder="Enter password" />
-    </div> 
-    
-    <button className="button"> Create Account </button>
+  return ( 
+    <>
+      <form className="login" onSubmit={handleSubmit}>
+        <h1 className="word">Sign Up</h1>
 
-    <p> Login Instead?</p> 
+        <div className="container">
+          <div className="user">
+            <label>First Name</label>
+            <input 
+              type="text"
+              name="naming"
+              className="value"
+              placeholder="Enter first name"
+              value={formData.naming}
+              onChange={handleChange}
+            />
+          </div>
 
-    </div> 
- </form>
-                </>
-    );
-};
+          <div className="user">
+            <label>Email</label>
+            <input
+              type="email" 
+              name="email"
+              className="value"
+              placeholder="Enter email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className="user">
+            <label>Username</label>
+            <input
+              type="text"
+              name="uname"
+              className="value"
+              placeholder="Enter username"
+              value={formData.uname}
+              onChange={handleChange}
+            />
+          </div>
+ 
+          <div className="user">
+            <label>Password</label>
+            <input
+              type="password"
+              name="password"
+              className="value"
+              placeholder="Enter password"
+              value={formData.password}
+              onChange={handleChange}
+            />
+          </div>
+
+          {validate && <p className="validation-error">{validate}</p>}
+
+          {}
+
+          <button type="submit" className="button">
+            Create Account
+          </button>
+
+          <p>
+            Already have an account? <Link to="/login">Login instead</Link>
+          </p>
+        </div>
+      </form>
+    </>
+  );
+  };
 
 export default Signup; 

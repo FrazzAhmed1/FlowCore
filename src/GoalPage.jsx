@@ -5,7 +5,7 @@ import './timer.jsx';
 
 const GoalPage = () => {  
     return (
-        <>
+        <> 
                     <header className="header"> 
                         <h1 className="title">FlowCore</h1> 
                         <nav className="access">

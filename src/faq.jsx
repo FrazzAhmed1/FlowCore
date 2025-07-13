@@ -10,8 +10,8 @@ const Faq = () => {
         <h2>Frequently Asked Questions</h2> 
        
         <details className="faq">
-          <summary>What is FocusMate?</summary>
-          <p>FocusMate is a productivity app that helps you manage your time and tasks using the Pomodoro technique, goal tracking, and task organization.</p> 
+          <summary>What is FlowCore?</summary> 
+          <p>FlowCore is a productivity app that helps you manage your time and tasks using the Pomodoro technique, goal tracking, and task organization.</p> 
         </details> 
          
         <details className="faq"> 
@@ -19,7 +19,7 @@ const Faq = () => {
           <p>It allows you to work in focused 25-minute sessions, followed by short breaks. This helps improve concentration and reduce burnout.</p>
         </details> 
       
-        <details className="faq">
+        <details className="faq"> 
           <summary>Can I add and delete tasks?</summary>
           <p>Yes, on the Tasks page you can add new tasks, mark them as complete, delete them, or update them as needed.</p> 
         </details>

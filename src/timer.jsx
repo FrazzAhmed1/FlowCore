@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import './timer.css';
+import './timer.css'; 
 
 const Timer = ({ name, time, increment }) => {    
     const [timer, setTimer] = useState(increment ? 0 : time); 
     const [isRunning, setIsRunning] = useState(false); 
 
     const startTimer = () => { 
-        setIsRunning(true);   
+        setIsRunning(true);    
     }; 
 
     const pauseTimer = () => { 
@@ -48,5 +48,5 @@ const Timer = ({ name, time, increment }) => {
     ); 
 };
 
-export default Timer;
+export default Timer; 
 
