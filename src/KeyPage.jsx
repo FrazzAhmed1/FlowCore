@@ -19,7 +19,7 @@ const KeyPage = () => {
 
       <main className="keypage-main">
         <section className="keypage-hero">
-          <div className="hero-content">
+          <div className="hero-content"> 
             <h1 className="keypage-hero-title">
               <span className="title-gradient">Organize.</span>
               <span className="title-gradient">Achieve.</span>
@@ -33,8 +33,8 @@ const KeyPage = () => {
               <Link to="/tasks" className="keypage-btn primary hover-effect">
                 Get Started
                 <span className="btn-arrow">→</span>
-              </Link>
-            </div>
+              </Link> 
+            </div> 
           </div>
           <div className="hero-image">
             <div className="dashboard-mockup"></div>
@@ -60,7 +60,7 @@ const KeyPage = () => {
               </svg>
             </div> 
             <h3>Task Management</h3>
-            <p>Organize your workflow with powerful task tools.</p>
+            <p>Organize your workflow with powerful task tools.</p> 
           </div>
         </section> 
       </main>

@@ -16,7 +16,7 @@ const Faq = () => {
          
         <details className="faq"> 
           <summary>How does the Pomodoro Timer work?</summary>
-          <p>It allows you to work in focused 25-minute sessions, followed by short breaks. This helps improve concentration and reduce burnout.</p>
+          <p>It allows you to work in focused 25-minute sessions, followed by short breaks. This helps improve concentration and reduce burnout.</p> 
         </details> 
       
         <details className="faq"> 
@@ -48,7 +48,7 @@ const Faq = () => {
           <summary>What features are coming in future updates?</summary>
           <p>We plan to add user accounts, syncing across devices, analytics with charts, reminders, and more customization options.</p>
         </details>
-      </main>
+      </main> 
                 </>
     );
 };

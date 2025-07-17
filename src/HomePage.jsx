@@ -9,19 +9,19 @@ const HomePage = () => {
     const [quote, setQuote] = React.useState(''); 
     const [author, setAuthor] = React.useState('');  
  
-    const key = '5NGROY6U+kPPOPHarq01ZA==O8nMQCn7ZM8RmhEO';  
+    const key = '5NGROY6U+kPPOPHarq01ZA==O8nMQCn7ZM8RmhEO';   
      
     useEffect(() => { 
         
-        const fetchQuote = async () => {  
+        const fetchQuote = async () => {   
  
             try { 
                 const response = await fetch(`https://api.api-ninjas.com/v1/quotes 
 `, {
-                    method: 'GET', 
+                    method: 'GET',  
                     headers: {
                         'X-Api-Key': key, 
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/json' 
                     }
                 }); 
                 if (!response.ok) {
@@ -46,7 +46,7 @@ const HomePage = () => {
     
 
     return ( 
-        <div className="homepage"> 
+        <div className="homepage">  
             <header className="header"> 
                 <h1 className="title">FlowCore</h1> 
                 <nav className="access"> 
@@ -72,4 +72,4 @@ const HomePage = () => {
     );
 }; 
 
-export default HomePage; 
+export default HomePage;  

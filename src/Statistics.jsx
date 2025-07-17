@@ -103,8 +103,8 @@ const Statistics = () => {
       <div className="stats"> 
         <h1>Statistics</h1>
         <h2>Welcome, Fraz!</h2>
-        <canvas ref={chartRef}></canvas>
-        <canvas ref={chartRef2}></canvas>
+        <canvas ref={chartRef}></canvas> 
+        <canvas ref={chartRef2}></canvas> 
       </div>
     </>
   );
