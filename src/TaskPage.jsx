@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom';
 import './tasks.css';
 
 const TaskPage = () => { 
-  const [array, setArray] = useState([]);
-  const [input, setInput] = useState('');
+  const [array, setArray] = useState([]); 
+  const [input, setInput] = useState(''); 
   const [priority, setPriority] = useState('low'); 
   const [date, setDate] = useState(''); 
 
   const addTask = () => { 
     if (input.trim() === '') return; 
     const newTask = { 
-      text: input,
+      text: input, 
       priority: priority, 
       date: date, 
     }; 
@@ -56,11 +56,11 @@ const TaskPage = () => {
                 <option value="middle">Medium Priority</option>
                 <option value="high">High Priority</option> 
               </select> 
-              <input
+              <input 
                 type="date" 
                 value={date} 
                 onChange={(e)=> setDate(e.target.value)}
-                className="date-select"
+                className="date-select" 
               />
               <button onClick={addTask} className="add-button">+ Add Task</button> 
             </div>
@@ -80,18 +80,18 @@ const TaskPage = () => {
               <div key={index} className="task-item"> 
                 <div className="task-content">
                   <span className="task-text">{task.text}</span>
-                  <span className={`task-priority ${task.priority}`}>
+                  <span className={`task-priority ${task.priority}`}> 
                     {task.priority.charAt(0).toUpperCase() + task.priority.slice(1)}
                   </span>
                   <span className="task-date">{task.date || 'No date'}</span>
                 </div>
-                <div className="task-actions">
+                <div className="task-actions"> 
                   <button onClick={() => deleteTask(index)} className="delete-button">
                     Delete
                   </button>
                   <button className="update-button">Update</button>
                 </div>
-              </div>
+              </div> 
             ))}
           </div>
         </section>
@@ -100,4 +100,4 @@ const TaskPage = () => {
   );
 }; 
 
-export default TaskPage;
+export default TaskPage; 
