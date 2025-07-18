@@ -45,7 +45,7 @@ const GoalsPage = () => {
               placeholder="What goal do you want to achieve?"
               value={input} 
               onChange={(e) => setInput(e.target.value)} 
-            />
+            /> 
             <div className="input-controls">
               <select
                 value={priority}
@@ -100,4 +100,4 @@ const GoalsPage = () => {
   );
 }; 
 
-export default GoalsPage;
+export default GoalsPage; 

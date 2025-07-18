@@ -9,7 +9,7 @@ const HomePage = () => {
     const [quote, setQuote] = React.useState(''); 
     const [author, setAuthor] = React.useState('');  
  
-    const key = '5NGROY6U+kPPOPHarq01ZA==O8nMQCn7ZM8RmhEO';   
+    const key = '5NGROY6U+kPPOPHarq01ZA==O8nMQCn7ZM8RmhEO'; 
      
     useEffect(() => { 
         
@@ -20,7 +20,7 @@ const HomePage = () => {
 `, {
                     method: 'GET',  
                     headers: {
-                        'X-Api-Key': key, 
+                        'X-Api-Key': key,  
                         'Content-Type': 'application/json' 
                     }
                 }); 
@@ -55,7 +55,8 @@ const HomePage = () => {
                     <Link to="/" className="button1">FAQ</Link> 
                     <Link to="/" className="button1">Login</Link> 
                     <Link to="/" className="button1">Sign-Up</Link> 
-                    <Link to="/statistics" className="button1">Statistics</Link> 
+                    <Link to="/statistics" className="button1">Statistics</Link>
+                    <Link to="/journal" className="button1">Journal</Link> 
                 </nav> 
             </header> 
 
@@ -72,4 +73,4 @@ const HomePage = () => {
     );
 }; 
 
-export default HomePage;  
+export default HomePage; 

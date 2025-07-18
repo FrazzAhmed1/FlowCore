@@ -8,12 +8,13 @@ import KeyPage from './KeyPage.jsx';
 import Login from './Login.jsx'; 
 import Signup from './Signup.jsx';
 import Faq from './faq.jsx'; 
-import './App.css'; 
+import Journal from './Journal.jsx'; 
+import './App.css';  
 
 function App() { 
   const [count, setCount] = useState(0); 
 
-  return ( 
+  return (  
     <Router> 
       <Routes> 
         <Route path="/" element={<KeyPage />} />
@@ -24,6 +25,7 @@ function App() {
         <Route path="/login" element={<Login/>} />
         <Route path="/Signup" element={<Signup/>}/>
         <Route path="/faq" element={<Faq/>}/>
+        <Route path="/journal" element={<Journal/>}/>
       </Routes> 
     </Router> 
   ); 
