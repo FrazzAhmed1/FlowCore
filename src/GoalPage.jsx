@@ -31,7 +31,7 @@ const GoalsPage = () => {
         <nav className="nav-links">
           <Link to="/tasks" className="nav-button">Tasks</Link>
           <Link to="/goals" className="nav-button">Goals</Link>
-          <Link to="/" className="nav-button">FAQ</Link>
+          <Link to="/" className="nav-button">FAQ</Link> 
         </nav>
       </header>
 

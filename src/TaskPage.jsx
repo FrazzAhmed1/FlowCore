@@ -11,7 +11,7 @@ const TaskPage = () => {
   const addTask = () => { 
     if (input.trim() === '') return; 
     const newTask = { 
-      text: input, 
+      text: input,  
       priority: priority, 
       date: date, 
     }; 
@@ -32,7 +32,7 @@ const TaskPage = () => {
           <Link to="/tasks" className="nav-button">Tasks</Link>
           <Link to="/goals" className="nav-button">Goals</Link>
           <Link to="/" className="nav-button">FAQ</Link>
-        </nav>
+        </nav> 
       </header>
 
       <div className="task-management-container">
@@ -41,12 +41,12 @@ const TaskPage = () => {
           <div className="input-group">
             <input
               type="text"
-              className="task-input"
+              className="task-input" 
               placeholder="What needs to be done?"
               value={input} 
               onChange={(e) => setInput(e.target.value)} 
             />
-            <div className="input-controls">
+            <div className="input-controls"> 
               <select
                 value={priority}
                 onChange={(e) => setPriority(e.target.value)} 
@@ -90,7 +90,8 @@ const TaskPage = () => {
                     Delete
                   </button>
                   <button className="update-button">Update</button>
-                </div>
+                  <button onClick={()=> deleteTask(index)} className="complete-button"> Complete </button> 
+                </div> 
               </div> 
             ))}
           </div>

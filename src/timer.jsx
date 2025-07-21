@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './timer.css'; 
 
-const Timer = ({ name, time, increment }) => {    
+const Timer = ({ name, time, increment }) => { 
     const [timer, setTimer] = useState(increment ? 0 : time); 
     const [isRunning, setIsRunning] = useState(false); 
 
@@ -26,13 +26,13 @@ const Timer = ({ name, time, increment }) => {
                 if (!increment && prevTimer <= 0) {
                     clearInterval(interval);
                     setIsRunning(false); 
-                    return 0;
+                    return 0; 
                 }
                 return increment ? prevTimer + 1 : prevTimer - 1; 
             });
         }, 1000); 
 
-        return () => clearInterval(interval);
+        return () => clearInterval(interval); 
     }, [isRunning, increment]); 
 
     return ( 
@@ -42,7 +42,7 @@ const Timer = ({ name, time, increment }) => {
             <div className="play"> 
                 <button onClick={startTimer} className="button2">Start</button> 
                 <button onClick={pauseTimer} className="button2">Pause</button>
-                <button onClick={resetTimer} className="button2">Reset</button>
+                <button onClick={resetTimer} className="button2">Reset</button> 
             </div>
         </main> 
     ); 

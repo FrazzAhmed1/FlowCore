@@ -34,7 +34,7 @@ const HomePage = () => {
                     setQuote(data[0].quote);
                     setAuthor(data[0].author);
                 }
-            } catch (error) {
+            } catch (error) { 
                 console.error('Error fetching quote:', error);
                 setQuote('Failed to fetch quote');
                 setAuthor('Unknown');
@@ -66,7 +66,7 @@ const HomePage = () => {
                 <p>- {author}</p> 
             </div> 
 
-            <Timer name="Pomodoro Timer" time={25*60} increment={false}/>
+            <Timer name="Pomodoro Timer" time={25*60} increment={false}/> 
             <Timer name="Study Productive Counter" time={0} increment={true}/> 
             
         </div> 

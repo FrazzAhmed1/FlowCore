@@ -10,7 +10,7 @@ const Statistics = () => {
     const ctx = chartRef.current.getContext('2d'); 
 
     const timeChart = new Chart(ctx, {
-      type: 'bar',
+      type: 'bar', 
       data: {
         labels: ['Tasks Completed'], 
         datasets: [{
@@ -50,7 +50,7 @@ const Statistics = () => {
   useEffect(() => { 
     const ctx2 = chartRef2.current.getContext('2d'); 
 
-    const tasksChart = new Chart(ctx2, {
+    const tasksChart = new Chart(ctx2, { 
       type: 'line',
       data: {
         labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
