@@ -2,32 +2,58 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Journal.css';
 
-const Journal = () => {
-    const [date, setDate] = useState('');
+const Journal = () => { 
+    const [date, setDate] = useState(''); 
     const [title, setTitle] = useState('');
-    const [write, setWrite] = useState('');
-    const [array, setArray] = useState([]);
+    const [write, setWrite] = useState(''); 
+    const [array, setArray] = useState([]); 
+    const [view,setView]= useState (null); 
+    const [message,Setmessage] = useState(); 
 
-    const addJournal = () => {
-        if (write.trim() === '') { 
-            return;
-        }
+    const addJournal = () => { 
+        if (write.trim() === '' || date.trim() === '' || title.trim() === '') { 
+         Setmessage('Must enter enter all required fields to save the journal'); 
+            return; 
+        } 
 
-        const journal = {
+        const journal = { 
             id: Date.now(), 
-            nametag: title,
+            nametag: title, 
             input: write, 
             time: date,
         };
 
         setArray([...array, journal]); 
 
-        setDate('');
+        setDate(''); 
         setTitle('');
         setWrite('');
+        Setmessage('');
+    }; 
+ 
+    const renderJournal = (journal) => { 
+      setView(journal);
+      setDate(journal.time); 
+      setTitle(journal.nametag); 
+      setWrite(journal.input); 
+    } 
+
+    const renderBlank = () => { 
+        setView('');
+        setDate('');
+        setTitle(''); 
+        setWrite(''); 
+    } 
+    
+    const deleteJournal = (journalToDelete) => { 
+        setArray(prevArray => prevArray.filter(journal => journal.id !== journalToDelete.id));
+        if (view && view.id === journalToDelete.id) {
+            renderBlank(); 
+        } 
+        Setmessage(''); 
     }; 
 
-    return (
+    return ( 
         <div className="journal-app">
             <header className="journal-header">
                 <h1 className="journal-logo">FlowCore</h1>
@@ -44,25 +70,18 @@ const Journal = () => {
                 <div className="journal-fullscreen">
                     <div className="journal-entries-panel">
                         <div className="entries-header">
-                            <h2>Journal Entries</h2>
-                            <button className="new-entry-btn">+ New Entry</button>
-                        </div>
-                        <div className="entries-scroll-container">
+                            <h2>Journal Entries</h2> 
+                            <button className="new-entry-btn" onClick={() => renderBlank()}>+ New Entry</button> 
+                        </div> 
+                        <div className="entries-scroll-container"> 
                             {array.map((entry, index) => (  
-                                <div key={entry.id} className="entry-card">
+                                <div key={entry.id} className="entry-card"  onClick={() => renderJournal(entry)}> 
                                     <h3>{entry.nametag}</h3>
                                     <p>{entry.time}</p> 
+                                    <button onClick = {() => deleteJournal(entry)}> delete </button> 
                                 </div> 
                             ))} 
-                            <div className="entry-card active">
-                                <h3>Today's Reflection</h3>
-                                <p>June 15, 2023</p>
-                            </div>
-                            <div className="entry-card">
-                                <h3>Weekly Review</h3>
-                                <p>June 14, 2023</p>
-                            </div>
-                        </div>
+                        </div> 
                     </div>
 
                     <div className="journal-editor-panel">
@@ -72,14 +91,15 @@ const Journal = () => {
                                 className="editor-date" 
                                 value={date}
                                 onChange={(e) => setDate(e.target.value)}
-                            />
+                            /> 
+                             <p> {message} </p> 
                             <input
                                 type="text" 
                                 value={title} 
                                 onChange={(e) => setTitle(e.target.value)}
                                 placeholder="Title"
-                                className="editor-title-input"
-                            />
+                                className="editor-title-input" 
+                            /> 
                             <button onClick={addJournal} className="editor-save-btn">Save</button>
                         </div> 
                         <textarea
@@ -87,12 +107,12 @@ const Journal = () => {
                             placeholder="Start writing your thoughts here..."
                             value={write}
                             onChange={(e) => setWrite(e.target.value)}
-                        ></textarea>
-                    </div>
-                </div>
+                        ></textarea> 
+                    </div> 
+                </div> 
             </div>
         </div>
-    );
-};
+    ); 
+}; 
 
 export default Journal;

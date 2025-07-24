@@ -68,7 +68,7 @@ const HomePage = () => {
 
             <Timer name="Pomodoro Timer" time={25*60} increment={false}/> 
             <Timer name="Study Productive Counter" time={0} increment={true}/> 
-            
+             
         </div> 
     );
 }; 

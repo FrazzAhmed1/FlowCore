@@ -13,7 +13,7 @@ html, body, #root {
       height: 100vh;
       width: 100vw;
       background-color: #f8f9fa;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Inter', sans-serif; 
   }
   
   .journal-header {

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './KeyPage.css';
 
 const KeyPage = () => { 
-  return (
+  return ( 
     <div className="keypage-container"> 
       <header className="keypage-header">
         <div className="keypage-logo">

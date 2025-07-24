@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'; 
 import './timer.css'; 
 
 const Timer = ({ name, time, increment }) => { 
@@ -6,7 +6,7 @@ const Timer = ({ name, time, increment }) => {
     const [isRunning, setIsRunning] = useState(false); 
 
     const startTimer = () => { 
-        setIsRunning(true);    
+        setIsRunning(true); 
     }; 
 
     const pauseTimer = () => { 
