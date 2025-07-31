@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './KeyPage.css';
+import Header from './Header'; 
 
 const KeyPage = () => { 
   return ( 
@@ -9,7 +10,7 @@ const KeyPage = () => {
         <div className="keypage-logo">
           <span className="logo-gradient">FlowCore</span>
         </div> 
-        <nav className="keypage-nav">
+        <nav className="keypage-nav"> 
           <Link to="/login" className="keypage-nav-link hover-effect">Login</Link>
           <Link to="/signup" className="keypage-nav-link hover-effect">Sign Up</Link>
           <Link to="/faq" className="keypage-nav-link hover-effect">FAQ</Link>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Productivity.css'; 
+import './Productivity.css';
+import Header from './Header';
 
 
 const ProductivityList = ({pageTitle, inputPlaceholder,addButtonText,entityType,defaultPriority}) => {
@@ -9,15 +10,15 @@ const ProductivityList = ({pageTitle, inputPlaceholder,addButtonText,entityType,
   const [priority, setPriority] = useState(defaultPriority || 'low'); 
   const [date, setDate] = useState(''); 
 
-  const addItem = () => {
+  const addItem = () => { 
     if (input.trim() === '') return; 
 
     const newItem = { 
-      text: input,
+      text: input, 
       priority: priority,
-      id: Date.now(),
-      date: date,
-    };
+      id: Date.now(), 
+      date: date, 
+    }; 
 
     setArray([...array, newItem]);
     setInput('');
@@ -26,25 +27,18 @@ const ProductivityList = ({pageTitle, inputPlaceholder,addButtonText,entityType,
   };
 
   const deleteItem = (idToDelete) => {
-    setArray(array.filter((item) => item.id !== idToDelete));
+    setArray(array.filter((item) => item.id !== idToDelete)); 
   };
 
   return (
     <div className="task-app-container">
-      <header className="app-header">
-        <h1 className="app-title">FlowCore</h1>
-        <nav className="nav-links">
-          <Link to="/tasks" className="nav-button">Tasks</Link>
-          <Link to="/goals" className="nav-button">Goals</Link>
-          <Link to="/faq" className="nav-button">FAQ</Link>
-        </nav>
-      </header>
+      <Header />
 
       <div className="task-management-container">
         <section className="task-input-section">
           <h2 className="section-title">Add New {entityType}</h2>
-          <div className="input-group">
-            <input
+          <div className="input-group"> 
+            <input 
               type="text"
               className="task-input"
               placeholder={inputPlaceholder}
@@ -56,7 +50,7 @@ const ProductivityList = ({pageTitle, inputPlaceholder,addButtonText,entityType,
                 value={priority}
                 onChange={(e) => setPriority(e.target.value)}
                 className="priority-select"
-              >
+              > 
                 <option value="low">Low Priority</option>
                 <option value="middle">Medium Priority</option>
                 <option value="high">High Priority</option>
@@ -87,7 +81,7 @@ const ProductivityList = ({pageTitle, inputPlaceholder,addButtonText,entityType,
                   <span className="task-text">{item.text}</span>
                   <span className={`task-priority ${item.priority}`}>
                     {item.priority.charAt(0).toUpperCase() + item.priority.slice(1)}
-                  </span>
+                  </span> 
                   <span className="task-date">{item.date || 'No date'}</span>
                 </div>
                 <div className="task-actions">
@@ -95,9 +89,10 @@ const ProductivityList = ({pageTitle, inputPlaceholder,addButtonText,entityType,
                     Delete
                   </button>
                   <button className="update-button">Update</button> 
+                  <button className="complete-button" onClick={() => deleteItem(item.id)}> Complete</button>
                 </div>
               </div> 
-            ))}
+            ))} 
           </div>
         </section>
       </div>

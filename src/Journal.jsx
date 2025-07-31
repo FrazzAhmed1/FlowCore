@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Journal.css';
+import Header from './Header'; 
 
 const Journal = () => { 
-    const [date, setDate] = useState(''); 
+    const [date, setDate] = useState('');
     const [title, setTitle] = useState('');
     const [write, setWrite] = useState(''); 
     const [array, setArray] = useState([]); 
     const [view,setView]= useState (null); 
-    const [message,Setmessage] = useState(); 
+    const [message,setMessage] = useState(); 
 
     const addJournal = () => { 
         if (write.trim() === '' || date.trim() === '' || title.trim() === '') { 
@@ -28,7 +29,7 @@ const Journal = () => {
         setDate(''); 
         setTitle('');
         setWrite('');
-        Setmessage('');
+        setMessage('');
     }; 
  
     const renderJournal = (journal) => { 
@@ -39,7 +40,7 @@ const Journal = () => {
     } 
 
     const renderBlank = () => { 
-        setView('');
+        setView(''); 
         setDate('');
         setTitle(''); 
         setWrite(''); 
@@ -55,16 +56,7 @@ const Journal = () => {
 
     return ( 
         <div className="journal-app">
-            <header className="journal-header">
-                <h1 className="journal-logo">FlowCore</h1>
-                <button onClick={addJournal} className="editor-save-btn">Save</button>
-                <nav className="journal-nav">
-                    <Link to="/tasks" className="nav-item">Tasks</Link>
-                    <Link to="/goals" className="nav-item">Goals</Link>
-                    <Link to="/journal" className="nav-item active">Journal</Link>
-                    <Link to="/" className="nav-item">FAQ</Link>
-                </nav>
-            </header> 
+            <Header /> 
 
             <div className="journal-content-wrapper">
                 <div className="journal-fullscreen">
@@ -82,7 +74,7 @@ const Journal = () => {
                                 </div> 
                             ))} 
                         </div> 
-                    </div>
+                    </div> 
 
                     <div className="journal-editor-panel">
                         <div className="editor-toolbar">

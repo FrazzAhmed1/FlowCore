@@ -16,7 +16,7 @@ const Signup = () => {
     if (!formData.naming || !formData.email || !formData.uname || !formData.password) {
       setValidate("All fields must be filled in");
       return false; 
-    } else {
+    } else { 
       setValidate(''); 
       return true; 
     } 

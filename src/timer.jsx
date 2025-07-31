@@ -9,7 +9,7 @@ const Timer = ({ name, time, increment }) => {
         setIsRunning(true); 
     }; 
 
-    const pauseTimer = () => { 
+    const pauseTimer = () => {  
         setIsRunning(false); 
     }; 
 
@@ -49,4 +49,5 @@ const Timer = ({ name, time, increment }) => {
 };
 
 export default Timer; 
+
 

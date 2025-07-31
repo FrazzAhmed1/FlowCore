@@ -24,11 +24,11 @@ function App() {
             <ProductivityList 
               pageTitle="Goals"
               inputPlaceholder="What goal do you want to achieve?"
-              addButtonText="Add Goal"
+              addButtonText="Add Goal" 
               entityType="Goal"
-              defaultPriority="middle"
+              defaultPriority="middle" 
             />
-          }
+          } 
         />
 
         <Route  

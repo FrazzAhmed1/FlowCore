@@ -1,0 +1,71 @@
+/* src/components/common/Header.css */
+
+.app-header-main { /* Maps to your original .header */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    height: 100px;
+    padding: 0 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    position: fixed; /* Keep it fixed at the top */
+    top: 0;
+    left: 0;
+    right: 0; 
+    z-index: 1000;
+    box-sizing: border-box; /* Important for fixed headers */
+}
+
+.app-title-main { /* Maps to your original .title for the logo */
+    color: #7E5A9B;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    /* Ensure the Link itself has the text color */
+}
+
+.app-title-main .logo-link { /* Style for the actual Link inside the title */
+    color: #7E5A9B; /* Ensure the link text is the right color */
+    text-decoration: none; /* Remove underline */
+}
+
+.main-nav { /* Maps to your original .access */
+    display: flex;
+    gap: 50px; /* Space between nav items */
+    align-items: center;
+    /* flex: 0.6; - You might not need this if it's solely controlling spacing */
+}
+
+/* Styles for the nav links - combining .button1 and .button2 visual properties */
+.nav-button-main { /* Maps to your original .button1 */
+    border-radius: 15px;
+    padding: 2px 12px;
+    height: 40px;
+    background-color: #7E5A9B;
+    color: white;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    width: 120px; /* Matches your .button1 width */
+}
+
+.nav-button-main:hover {
+    background-color: #9279B8;
+    transform: scale(1.05);
+} 
+
+/* Styles specifically for the active link from NavLink */
+.nav-button-main.active {
+    /* You can customize the active state here. For example: */
+    background-color: #5A4273; /* A slightly darker shade of purple for active */
+    /* Or you could keep it the same as hover, depending on preference */
+    font-weight: bold;
+}
