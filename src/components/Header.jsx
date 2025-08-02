@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom'; 
-import './Header.css'; 
+import '../styles/Header.css'; 
 
 const Header = () => { 
     return ( 
         <header className="app-header-main">
             <h1 className="app-title-main">
                 <Link to="/homepage" className="logo-link">FlowCore</Link> 
-            </h1>
+            </h1> 
             <nav className="main-nav">
                 <NavLink to="/tasks" className="nav-button-main">Tasks</NavLink>
                 <NavLink to="/goals" className="nav-button-main">Goals</NavLink>

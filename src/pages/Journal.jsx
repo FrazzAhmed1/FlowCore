@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Journal.css';
-import Header from './Header'; 
+import '../styles/Journal.css';
+import Header from '../components/Header'; 
 
 const Journal = () => { 
     const [date, setDate] = useState('');
@@ -56,8 +56,7 @@ const Journal = () => {
 
     return ( 
         <div className="journal-app">
-            <Header /> 
-
+            <Header /> y
             <div className="journal-content-wrapper">
                 <div className="journal-fullscreen">
                     <div className="journal-entries-panel">

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './faq.css'; 
+import '../styles/faq.css'; 
 
 const Faq = () => { 
     return ( 

@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Chart from 'chart.js/auto';
-import Header from './Header';
-import './Statistics.css';
+import Header from '../components/Header';
+import '../styles/Statistics.css';
 
 const Statistics = () => {
   const chartRef = useRef(null);
@@ -69,7 +69,7 @@ const Statistics = () => {
     });
 
     return () => tasksChart.destroy();
-  }, []);
+  }, []); 
 
   return (
     <>

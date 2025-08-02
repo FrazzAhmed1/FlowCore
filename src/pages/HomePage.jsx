@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import './HomePage.css';
-import Timer from './timer';
-import Header from './Header';
+import '../styles/HomePage.css';
+import Timer from '../components/timer';
+import Header from '../components/Header';
 
-const HomePage = () => {
+const HomePage = () => { 
     const [quote, setQuote] = useState('');
     const [author, setAuthor] = useState('');
     const key = import.meta.env.VITE_QUOTE_API_KEY; 
 
     useEffect(() => {
         const fetchQuote = async () => { 
-            try {
+            try { 
                 const response = await fetch(`https://api.api-ninjas.com/v1/quotes`, {
                     method: 'GET',
                     headers: {
@@ -46,7 +46,7 @@ const HomePage = () => {
                 <Timer name="Pomodoro Timer" time={25*60} increment={false}/>
                 <Timer name="Study Counter" time={0} increment={true}/>
             </div>
-        </div>
+        </div> 
     );
 };
 

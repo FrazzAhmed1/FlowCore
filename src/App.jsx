@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from './HomePage.jsx'; 
-import Statistics from './Statistics.jsx';
-import KeyPage from './KeyPage.jsx';
-import Login from './Login.jsx';
-import Signup from './Signup.jsx';
-import Faq from './faq.jsx';
-import Journal from './Journal.jsx'; 
-import ProductivityList from './ProductivityList.jsx'; 
-import './App.css';
+import HomePage from './pages/HomePage.jsx'; 
+import Statistics from './pages/Statistics.jsx';
+import KeyPage from './pages/KeyPage.jsx';
+import Login from './pages/Login.jsx'; 
+import Signup from './pages/Signup.jsx';
+import Faq from './components/faq.jsx';
+import Journal from './pages/Journal.jsx'; 
+import ProductivityList from './pages/ProductivityList.jsx'; 
+import './App.css'; 
 
 function App() { 
 

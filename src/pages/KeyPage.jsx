@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './KeyPage.css';
-import Header from './Header'; 
+import '../styles/KeyPage.css';
+import Header from '../components/Header'; 
 
 const KeyPage = () => { 
   return ( 
