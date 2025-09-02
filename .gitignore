@@ -1,14 +1,10 @@
-# Node.js dependencies
+# Dependencies
+node_modules/
 backend/node_modules/
 my-react-app/node_modules/
 
-# Environment variables
-backend/.env
-my-react-app/.env
+# Environment files
+*.env
 
-# Build outputs
-my-react-app/build/
-backend/dist/
-
-# System files
-.DS_Store
+# Logs
+*.log
