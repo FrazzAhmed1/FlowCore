@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #F4F2FA;
+    color: #2E2E2E;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    height: 100px;
+    padding: 0 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.access {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    flex: 0.6;
+}
+
+.button1,
+.button2 {
+    border-radius: 15px;
+    padding: 2px 12px;
+    height: 40px;
+    background-color: #7E5A9B;
+    color: white;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+}
+
+.button1 {
+    width: 120px;
+}
+
+.button2 {
+    width: 80px;
+}
+
+.button1:hover,
+.button2:hover {
+    background-color: #9279B8;
+    transform: scale(1.05);
+}
+
+.timer {
+    display: flex;
+    flex-direction: column;
+    height: 280px;
+    width: 350px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #7E5A9B;
+    margin: auto;
+    margin-top: 200px;
+    border-radius: 20px;
+    align-self: center;
+    box-shadow: 0 8px 20px rgba(126, 90, 155, 0.3);
+    padding: 20px;
+    color: white;
+}
+
+.quote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #7E5A9B 0%, #9279B8 100%);
+    width: 600px;
+    min-height: 130px;
+    margin: 130px auto 0 auto;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(146, 121, 184, 0.4);
+    color: white;
+    text-align: center;
+    font-size: 1.15rem;
+    line-height: 1.4;
+    letter-spacing: 0.4px;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(3px);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.time {
+    font-size: 50px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.play {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.title {
+    color: #7E5A9B;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+
+.title1 {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #444;
+}
+
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.journal-app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #f8f9fa;
+    font-family: 'Inter', sans-serif;
+}
+
+.journal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #4b3f72;
+    color: white;
+    flex-shrink: 0;
+}
+
+.journal-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.journal-nav {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.nav-item.active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.journal-content-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 20px;
+    padding-top: 120px;
+    box-sizing: border-box;
+}
+
+.journal-fullscreen {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.journal-entries-panel {
+    flex: 0 0 300px;
+    min-width: 250px;
+    max-width: 350px;
+    background: white;
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.entries-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.entries-header h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #4b3f72;
+}
+
+.new-entry-btn {
+    background: #4b3f72;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 0.9rem;
+}
+
+.entries-scroll-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+.entry-card {
+    padding: 1.2rem;
+    margin-bottom: 0.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.entry-card:hover {
+    background: #f5f5f5;
+}
+
+.entry-card.active {
+    background: #f0f2f5;
+    border-left: 3px solid #4b3f72;
+}
+
+.entry-card h3 {
+    margin: 0 0 0.3rem 0;
+    font-size: 1rem;
+}
+
+.entry-card p {
+    margin: 0;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.journal-editor-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    overflow: hidden;
+}
+
+.editor-toolbar {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background: white;
+    width: 100%;
+}
+
+.editor-date {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0.5rem;
+    font-family: inherit;
+    width: 150px;
+}
+
+.editor-title-input {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0.5rem;
+    font-family: inherit;
+    flex: 1;
+    min-width: 200px;
+    max-width: 400px;
+}
+
+.editor-save-btn {
+    background: #4b3f72;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-left: 10px;
+}
+
+.editor-save-btn:hover {
+    background: #5a4c82;
+}
+
+.editor-main {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    resize: none;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.6;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.editor-main:focus {
+    outline: none;
+}
+
+.delete-button {
+    background-color: #f0f0f0;
+    color: #333;
+    border: none;
+    border-radius: 6px;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.delete-button:hover {
+    background-color: #ff4444;
+    color: white;
+}
+
+.entry-card button {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 4px;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.entry-card button:hover {
+    background-color: #ff4444;
+    color: white;
+}

@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: #F4F2FA;
+    color: #2E2E2E;
+    min-height: 100vh;
+}
+
+.keypage-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.keypage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: #000000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+.keypage-logo {
+    font-size: 1.8rem;
+    font-weight: 700; 
+    color: #7E5A9B;
+    letter-spacing: 0.8px;
+}
+
+.keypage-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.keypage-nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    background-color: #7E5A9B;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.keypage-nav-link:hover {
+    background-color: #9279B8;
+    transform: scale(1.05);
+}
+
+.keypage-main {
+    flex: 1;
+    padding: 2rem 5%;
+}
+
+.keypage-hero {
+    background: linear-gradient(145deg, #8e70af, #a493c5);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(126, 90, 155, 0.3);
+    padding: 3rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    color: white;
+}
+
+.keypage-hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.keypage-hero-description {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+.keypage-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.keypage-btn {
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.keypage-btn.primary {
+    background-color: white;
+    color: #7E5A9B;
+}
+
+.keypage-btn.primary:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.features-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 4rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(126, 90, 155, 0.2);
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7E5A9B;
+    font-size: 1.5rem;
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #7E5A9B;
+}
+
+.feature-card p {
+    color: #666;
+}
+
+.keypage-footer {
+    background: black;
+    color: white;
+    padding: 2rem 5%;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.footer-link {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .keypage-hero {
+        padding: 2rem;
+    }
+    
+    .keypage-hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .keypage-nav {
+        gap: 1rem;
+    }
+    
+    .features-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .keypage-header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .keypage-buttons {
+        flex-direction: column;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

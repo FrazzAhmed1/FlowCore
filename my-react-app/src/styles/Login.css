@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.word {
+    margin-bottom: -10px;
+    font-size: 2rem;
+    font-weight: 600;
+    color: white; 
+}
+
+body {
+    background: linear-gradient(135deg, #5A3E7E, #7E5A9B);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin: 0; 
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background: linear-gradient(135deg, #7E5A9B, #9279B8);
+    align-items: center;
+    padding: 60px 50px;
+    width: 95%;
+    max-width: 1200px;
+    margin: 40px auto;
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 800px;
+    align-items: center;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.value {
+    height: 55px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    padding: 0 20px;
+    font-size: 1.1rem;
+    outline: none;
+    background-color: #F4F2FA;
+    color: #2E2E2E;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.button {
+    height: 55px;
+    width: 180px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    background-color: #fff;
+    color: #7E5A9B;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #7E5A9B;
+    color: white;
+    transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+    .login {
+        padding: 40px 30px;
+        width: 90%;
+        margin: 20px auto;
+    }
+    
+    .value, .button {
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login {
+        padding: 30px 20px;
+        width: 95%;
+        border-radius: 20px;
+    }
+    
+    .word {
+        font-size: 1.8rem;
+    }
+    
+    .value {
+        padding: 0 15px;
+        font-size: 1rem;
+    }
+    
+    .button {
+        width: 160px;
+    }
+}
